@@ -1,13 +1,13 @@
-package com.josh.order_management;
+package com.josh.Purchase_management;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class OrderManagementApplication {
+public class PurchaseManagementApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(OrderManagementApplication.class, args);
+        SpringApplication.run(PurchaseManagementApplication.class, args);
     }
 
 }

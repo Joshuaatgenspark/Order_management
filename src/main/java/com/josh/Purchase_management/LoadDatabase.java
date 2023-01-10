@@ -1,4 +1,4 @@
-package com.josh.order_management;
+package com.josh.Purchase_management;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,11 +12,11 @@ class LoadDatabase {
     private static final Logger log = LoggerFactory.getLogger(LoadDatabase.class);
 
     @Bean
-    CommandLineRunner initDatabase(OrderRepository repository) {
+    CommandLineRunner initDatabase(PurchaseRepository repository) {
 
         return args -> {
-            log.info("Preloading " + repository.save(new Order("Coffee", "Hot Drink")));
-            log.info("Preloading " + repository.save(new Order("Latte", "Hot Drink")));
+            log.info("Preloading " + repository.save(new Purchase("Coffee", "Hot Drink")));
+            log.info("Preloading " + repository.save(new Purchase("Latte", "Hot Drink")));
         };
     }
 }

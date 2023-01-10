@@ -1,4 +1,4 @@
-package com.josh.order_management;
+package com.josh.Purchase_management;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,15 +9,15 @@ import java.util.Objects;
 
 
 @Entity
-class Order {
+class Purchase {
 
     private @Id @GeneratedValue long id;
     private String name;
     private String type;
 
-    public Order() {}
+    public Purchase() {}
 
-    Order(String name, String type) {
+    Purchase(String name, String type) {
         this.name = name;
         this.type = type;
     }
@@ -50,8 +50,8 @@ class Order {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Order order)) return false;
-        return id == order.id && name.equals(order.name) && type.equals(order.type);
+        if (!(o instanceof Purchase purchase)) return false;
+        return id == purchase.id && name.equals(purchase.name) && type.equals(purchase.type);
     }
 
     @Override
@@ -61,7 +61,7 @@ class Order {
 
     @Override
     public String toString() {
-        return "Order{" +
+        return "Purchase{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", type='" + type + '\'' +
